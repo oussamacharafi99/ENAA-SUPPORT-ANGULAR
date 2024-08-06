@@ -8,8 +8,11 @@ import { Component, OnInit } from '@angular/core';
 export class HomeComponent implements OnInit {
 
   constructor() { }
-
+  check: boolean = false;
   ngOnInit(): void {
   }
-
+  
+  onOpenOrClose(check: boolean): void {
+    this.check = check;
+  }
 }

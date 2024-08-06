@@ -2,5 +2,34 @@
     width: 100%;
 }
 .container > form {
-
+    width: 100%;
+    padding: 10px;
+}
+.group{
+    width: 100%;
+    padding: 4px 0;
+}
+.group > label{
+    font-size: 13px;
+    font-weight: 800;
+    color: white;
+    text-transform: uppercase;
+}
+.group > .icon-input{
+    width: 80%;
+    border-radius: 7px;
+    border: 1px solid #D07C72;
+    display: flex;
+    align-items: center;
+    padding: 5px 10px;
+    justify-content: space-between;
+}
+.group > .icon-input > input{
+    border: none;
+    background: transparent;
+    width: 90%;
+    outline: none;
+}
+form > button{
+    width: 80%;
 }
