@@ -1,21 +1,36 @@
 <div class="main">
     <div class="main-wrapper">
         <div class="hero">
-            <div class="hero-left">
-                <div class="hero-left-img">
-                    <img src="../../../assets/images/man2.png" width="100%">
-                </div>
+            <div class="logo">
+                <img src="../../../assets/images/LogoB.png" width="100%" alt="logo">
             </div>
+            <p><em>Welcome to the E-Service Support Zone:</em> This private area is dedicated to assisting with all your service-related needs. If you encounter any issues, simply click the button below for support.</p>
 
-
-            <div class="hero-right">
-                <div class="hero-right-content">
-                    <div class="logo">
-                        <img src="../../../assets/images/logoBlack.png" width="100%" alt="logo">
-                    </div>
-                </div>
-                <app-login></app-login>
-            </div>
+            <button id="button" (click)="onOpenOrClose(true)">Get Support</button>
         </div>
     </div>
 </div>
+
+<section class="popup" [ngStyle]="{'display': check ? 'flex' : 'none'}">
+    <button (click)="onOpenOrClose(false)">Close</button>
+        <app-login></app-login>
+</section>
+
+<!-- 
+<div class="hero">
+    <div class="hero-left">
+        <div class="hero-left-img">
+            <img src="../../../assets/images/man2.png" width="100%">
+        </div>
+    </div>
+
+
+    <div class="hero-right">
+        <div class="hero-right-content">
+            <div class="logo">
+                <img src="../../../assets/images/LogoW.png" width="100%" alt="logo">
+            </div>
+        </div>
+        <app-login></app-login>
+    </div>
+</div> -->
