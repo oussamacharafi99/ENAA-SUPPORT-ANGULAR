@@ -20,13 +20,13 @@
 .group > label{
     font-size: 13px;
     font-weight: 800;
-    color: #ffc2bb;
+    color: #DE88B5;
     text-transform: uppercase;
 }
 .group > .icon-input{
     width: 100%;
     border-radius: 7px;
-    border: 1px solid #ffc2bb;
+    border: 1px solid #DE88B5;
     display: flex;
     align-items: center;
     padding: 5px 10px;
