@@ -7,7 +7,7 @@ export interface Material {
     name: string;
     description: string;
     etat: MaterialEtat;
-    insertDate: Date;
+    insert_date: String;
     user: User;
     tickets: Ticket[];
 }

@@ -1,0 +1,48 @@
+.mat-elevation-z8 {
+    background-color: #42424200;
+    color: #fff;
+    margin: 10px 0;
+    padding: 10px;
+    height: 300px;
+    width: 100%;
+    overflow-y: auto;
+    border-radius: 7px;
+}
+
+table {
+    width: 100%;
+    min-width: 600px;
+    border-radius: 12px;
+    background: transparent;
+}
+
+th.mat-header-cell,
+td.mat-cell {
+    color: #fff;
+    background: transparent;
+    text-transform: uppercase;
+}
+
+th.mat-header-cell {
+    background-color: #0202028a;
+}
+
+td.mat-cell {
+    background-color: transparent;
+}
+
+#remove {
+    padding: 6px;
+    border: 1px solid #ff1919;
+    background: transparent;
+    color: #ff1919;
+    border-radius: 5px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+#remove:hover {
+    background: #ff1919;
+    color: white;
+    border: 1px solid transparent;
+}
