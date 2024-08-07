@@ -10,6 +10,7 @@ import { InterceptorAuth } from './Service/auth_Interceptor.service';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DashboardComponent } from './Dashboard/dashboard/dashboard.component';
 import { MenuComponent } from './Dashboard/menu/menu.component';
+import { LogoutComponent } from './logout/logout.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { MenuComponent } from './Dashboard/menu/menu.component';
     HomeComponent,
     LoginComponent,
     DashboardComponent,
-    MenuComponent
+    MenuComponent,
+    LogoutComponent
   ],
   imports: [
     BrowserModule,
