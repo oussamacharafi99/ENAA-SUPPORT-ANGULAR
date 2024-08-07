@@ -1,16 +1,19 @@
 <div class="container">
+    <div class="logo">
+        <img src="../../../assets/images/LogoB.png" width="100%" alt="logo">
+    </div>
     <form [formGroup]="formLogin" (ngSubmit)="onSubmit()">
       <div class="group">
         <label for="username">username:</label><br>
         <div class="icon-input">
-            <input id="username" formControlName="username" type="text"  placeholder="Username"/>
+            <input id="username" formControlName="username" type="text"  placeholder="@enna.com"/>
             <img src="../../../assets/icons/email.png">
         </div>
       </div>
       <div class="group">
         <label for="password">password:</label><br>
         <div class="icon-input">
-            <input id="password" formControlName="password" type="password" placeholder="Password"/>
+            <input id="password" formControlName="password" type="password" placeholder="*******"/>
             <img src="../../../assets/icons/padlock.png">
         </div>
       </div>

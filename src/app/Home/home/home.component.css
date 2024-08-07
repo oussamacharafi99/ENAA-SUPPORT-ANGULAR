@@ -67,7 +67,7 @@ em{
     right: 50px;
     border: none;
     border-radius: 12px;
-    background: var(--color-light);
+    background: white;
     padding: 10px 14px;
     color: black;
     transition: .4s;
@@ -76,7 +76,7 @@ em{
   
   .popup > button:hover{
     background: black;
-    color: var(--color-light);
+    color: white;
   }
   
 
