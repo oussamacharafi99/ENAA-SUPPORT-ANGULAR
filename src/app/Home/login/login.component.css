@@ -1,5 +1,13 @@
 .container{
     width: 100%;
+    min-width: 300px;
+    background: red;
+    padding: 20px;
+    border: 2px solid black;
+    background: rgba(0, 0, 0, 0.075);
+    backdrop-filter: blur(30px);
+    border-radius: 16px;
+    box-shadow: 12px 12px 15px rgba(0, 0, 0, 0.142);
 }
 .container > form {
     width: 100%;
@@ -12,24 +20,48 @@
 .group > label{
     font-size: 13px;
     font-weight: 800;
-    color: white;
+    color: #ffc2bb;
     text-transform: uppercase;
 }
 .group > .icon-input{
-    width: 80%;
+    width: 100%;
     border-radius: 7px;
-    border: 1px solid #D07C72;
+    border: 1px solid #ffc2bb;
     display: flex;
     align-items: center;
     padding: 5px 10px;
     justify-content: space-between;
 }
+
 .group > .icon-input > input{
     border: none;
     background: transparent;
     width: 90%;
     outline: none;
 }
+.group > .icon-input > input::placeholder{
+    color: black;
+    font-weight: 300;
+}
 form > button{
-    width: 80%;
+    border: 1px solid black;
+    background: rgba(0, 0, 0, 0.187);
+    backdrop-filter: blur(10px);
+    color: #ffc2bb;
+    padding: 7px 10px;
+    font-weight: 800;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: .4s;
+    width: 100%;
+}
+form > button:hover{
+    border: 1px solid transparent;
+    color: #ffc2bb;
+    background: black;
+}
+
+.logo{
+    width: 120px;
+    margin: 0 auto;
 }

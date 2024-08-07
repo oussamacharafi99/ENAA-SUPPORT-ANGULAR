@@ -8,12 +8,16 @@ import { LoginComponent } from './Home/login/login.component';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { InterceptorAuth } from './Service/auth_Interceptor.service';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { DashboardComponent } from './Dashboard/dashboard/dashboard.component';
+import { MenuComponent } from './Dashboard/menu/menu.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    LoginComponent
+    LoginComponent,
+    DashboardComponent,
+    MenuComponent
   ],
   imports: [
     BrowserModule,
