@@ -11,6 +11,10 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DashboardComponent } from './Dashboard/dashboard/dashboard.component';
 import { MenuComponent } from './Dashboard/menu/menu.component';
 import { LogoutComponent } from './logout/logout.component';
+import { TicketsComponent } from './Dashboard/tickets/tickets.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MaterialeModule } from './materiale/materiale.module';
+import { MaterialsComponent } from './Dashboard/materials/materials.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +23,9 @@ import { LogoutComponent } from './logout/logout.component';
     LoginComponent,
     DashboardComponent,
     MenuComponent,
-    LogoutComponent
+    LogoutComponent,
+    TicketsComponent,
+    MaterialsComponent
   ],
   imports: [
     BrowserModule,
@@ -27,6 +33,8 @@ import { LogoutComponent } from './logout/logout.component';
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
+    BrowserAnimationsModule,
+    MaterialeModule
   ],
   providers: [
     {
