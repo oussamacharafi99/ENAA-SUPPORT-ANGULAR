@@ -35,7 +35,7 @@
     <ng-container matColumnDef="delete">
       <th mat-header-cell *matHeaderCellDef>Remove</th>
       <td mat-cell *matCellDef="let material">
-        <button id="remove" mat-button color="warn">Delete</button>
+        <button id="remove" mat-button color="warn" (click)="removeM(material.id)">Delete</button>
       </td>
     </ng-container>
 

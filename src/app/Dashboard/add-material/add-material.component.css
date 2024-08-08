@@ -1,0 +1,56 @@
+form{
+    width: 100%;
+    background-color: #42424200;
+    padding: 20px;
+    box-shadow: 4px 4px 15px #0000007d;
+}
+.group-group{
+    width: 100%;
+    display: flex;
+}
+.group{
+    width: 49%;
+    margin: 3px;
+}
+label {
+    color: white;
+    padding: 5px;
+    justify-content: space-between;
+    font-size: 12px;
+    font-weight: 700;
+}
+.group > input {
+    color: white;
+    border: 1px solid var(--color-primary);
+    padding: 10px 12px;
+    border-radius: 12px;
+    background: #de88b529;
+    width: 100%;
+}
+.groupText{
+    width: 100%;
+    margin: 3px;
+}
+textarea{
+    color: white;
+    border: 1px solid var(--color-primary);
+    padding: 10px 12px;
+    border-radius: 12px;
+    background: #de88b529;
+    width: 100%;
+}
+form > button{
+    color: white;
+    border: 1px solid var(--color-primary);
+    padding: 10px 12px;
+    border-radius: 10px;
+    background: #00000074;
+    font-weight: 800;
+    transition: .5s;
+}
+form > button:hover{
+    color: var(--color-primary);
+}
+::placeholder{
+    color: white;
+}
