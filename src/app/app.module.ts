@@ -15,6 +15,7 @@ import { TicketsComponent } from './Dashboard/tickets/tickets.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialeModule } from './materiale/materiale.module';
 import { MaterialsComponent } from './Dashboard/materials/materials.component';
+import { AddMaterialComponent } from './Dashboard/add-material/add-material.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { MaterialsComponent } from './Dashboard/materials/materials.component';
     MenuComponent,
     LogoutComponent,
     TicketsComponent,
-    MaterialsComponent
+    MaterialsComponent,
+    AddMaterialComponent
   ],
   imports: [
     BrowserModule,

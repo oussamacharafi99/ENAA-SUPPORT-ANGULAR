@@ -10,8 +10,21 @@ export class MaterialServiceService {
   constructor(private http: HttpClient) { }
 
   private _API_GET_MATERIALS = "http://localhost:9999/api/material/getall";
+  private _API_ADD_MATERIALS = "http://localhost:9999/api/material/add";
+  private _API_DELETE_MATERIALS = "http://localhost:9999/api/material/remove"
 
   getMaterials(): Observable<Material[]> {
     return this.http.get<Material[]>(this._API_GET_MATERIALS);
   }
+
+  addMaterials(material : Material):Observable<Material>{
+    this.getMaterials();
+    return this.http.post<Material>(this._API_ADD_MATERIALS, material)
+  }
+
+  removeMaterials(id : number){
+      return this.http.delete(this._API_DELETE_MATERIALS +'/'+id);
+  }
+
+
 }

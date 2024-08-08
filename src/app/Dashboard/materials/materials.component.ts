@@ -1,4 +1,4 @@
-import { Component, OnInit} from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Material } from 'src/app/Models/material';
 import { MaterialServiceService } from 'src/app/Service/material-service.service';
 
@@ -15,20 +15,26 @@ export class MaterialsComponent implements OnInit {
   constructor(private materialService: MaterialServiceService) { }
 
   ngOnInit(): void {
+    this.loadMaterials();
+  }
+
+  loadMaterials(): void {
     this.materialService.getMaterials().subscribe((data: Material[]) => {
       this.dataSource = data;
       console.log(data);
-    }, error => {
-      console.error("Error fetching materials", error);
     });
   }
 
-  // deleteMaterial(id: number): void {
-  //   this.materialService.deleteMaterialById(id).subscribe(() => {
-  //     this.dataSource = this.dataSource.filter(material => material.id !== id);
-  //     console.log(`Material with ID ${id} has been deleted`);
-  //   }, error => {
-  //     console.error("Error deleting material", error);
-  //   });
-  // }
+  removeM(id: number): void {
+    this.materialService.removeMaterials(id).subscribe(() => {
+      this.dataSource = this.dataSource.filter(material => material.id !== id);
+      console.log(`Material with ID ${id} has been deleted`);
+
+    }, error => {
+      console.error("Erreur lors de la suppression de la material", error);
+    });
+
+    this.loadMaterials();
+  }
+
 }
