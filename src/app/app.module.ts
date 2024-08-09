@@ -16,8 +16,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialeModule } from './materiale/materiale.module';
 import { MaterialsComponent } from './Dashboard/materials/materials.component';
 import { AddMaterialComponent } from './Dashboard/add-material/add-material.component';
-import { EmployeesComponent } from './Dashboard/employees/employees.component';
+import { EmployeesComponent } from './Dashboard/dashboard-employees/employees.component';
 import { DashboardHomeComponent } from './Dashboard/dashboard-home/dashboard-home.component';
+import { AddUserComponent } from './Dashboard/add-user/add-user.component';
+import { AddTechnicianComponent } from './Dashboard/add-technician/add-technician.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +33,9 @@ import { DashboardHomeComponent } from './Dashboard/dashboard-home/dashboard-hom
     MaterialsComponent,
     AddMaterialComponent,
     EmployeesComponent,
-    DashboardHomeComponent
+    DashboardHomeComponent,
+    AddUserComponent,
+    AddTechnicianComponent
   ],
   imports: [
     BrowserModule,

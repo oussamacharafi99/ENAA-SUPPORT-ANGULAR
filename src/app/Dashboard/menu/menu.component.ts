@@ -7,9 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MenuComponent implements OnInit {
 
+  activeLink: string = '';
+
   constructor() { }
 
   ngOnInit(): void {
+    this.activeLink = '/dashboard';
+  }
+
+  setActive(link: string): void {
+    this.activeLink = link;
   }
 
 }

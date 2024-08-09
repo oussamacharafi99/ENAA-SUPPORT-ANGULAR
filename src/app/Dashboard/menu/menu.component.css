@@ -41,20 +41,19 @@
     display: flex;
     align-items: center;
     text-align: left;
-    /* border: 2px solid var(--color-bleuvoilet); */
     border-radius: 10px;
     font-weight: 800;
     transition: .4s;
     box-shadow: 4px 4px 15px #00000041;
     border: 1px solid transparent;
 }
-.menu-link > a:hover , #a1{
-    background:rgba(17, 17, 17, 0.616) ;
-    backdrop-filter: blur(10px);
-    border: 1px solid #DE88B5;
-    color: #DE88B5;
-}
 .menu-link > a > img {
     width: 20px;
     margin-right: 20px;
+}
+.menu-link > a.active, .menu-link > a:hover {
+    background:rgba(17, 17, 17, 0.616);
+    backdrop-filter: blur(10px);
+    border: 1px solid grey;
+    color: var(--color-secondary);
 }

@@ -1,0 +1,21 @@
+<form [formGroup]="formAddTechnician" (ngSubmit)="addTechnician()">
+    <input type="hidden" formControlName="id" id="id">
+
+    <div class="group">
+        <label for="username">username</label>
+        <input type="text" formControlName="username" id="username" placeholder="Username">
+    </div>
+
+    <div class="group">
+        <label for="email">email</label>
+        <input type="text" formControlName="email" id="email" placeholder="Email">
+    </div>
+
+    <div class="group">
+        <label for="password">password</label>
+        <input type="password" formControlName="password" id="password" placeholder="Password">
+    </div>
+
+    <button type="submit" [disabled]="formAddTechnician.invalid">Add Technician</button>
+  </form>
+  

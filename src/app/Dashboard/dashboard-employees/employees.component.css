@@ -1,0 +1,21 @@
+.hero-main-wrapper{
+    width: 100%;
+}
+.main{
+    display: flex;
+    justify-content: space-between;
+}
+
+.InsertUser , .InsertTechnician{
+    width: 50%;
+    padding: 10px;
+    border-radius: 10px;
+    background: #00000027;
+    box-shadow:  4px 4px 15px rgba(0, 0, 0, 0.237);
+    padding: 10px;
+}
+.InsertUser > h5 , .InsertTechnician > h5{
+    font-size: 17px;
+    color:white;
+    padding: 0 10px;
+}

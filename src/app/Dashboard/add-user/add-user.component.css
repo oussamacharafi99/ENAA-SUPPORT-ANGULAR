@@ -1,15 +1,11 @@
 form{
-    width: 100%;
+    width: 90%;
     background-color: #42424200;
     padding: 20px;
     box-shadow: 4px 4px 15px #0000007d;
 }
-.group-group{
-    width: 100%;
-    display: flex;
-}
 .group{
-    width: 49%;
+    width: 80%;
     margin: 3px;
 }
 label {
@@ -27,18 +23,6 @@ label {
     background: #de88b529;
     width: 100%;
 }
-.groupText{
-    width: 100%;
-    margin: 3px;
-}
-textarea{
-    color: white;
-    border: 1px solid grey;
-    padding: 10px 12px;
-    border-radius: 12px;
-    background: #de88b529;
-    width: 100%;
-}
 form > button{
     color: white;
     border: 1px solid grey;
@@ -47,6 +31,8 @@ form > button{
     background: #00000074;
     font-weight: 800;
     transition: .5s;
+    cursor: pointer;
+    margin-top: 10px;
 }
 form > button:hover{
     color: var(--color-secondary);

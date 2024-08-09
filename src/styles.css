@@ -16,7 +16,8 @@
   }
  
 :root{
-    --color-primary:#DE88B5;
+    --color-primary:#9a5c70;
+    --color-secondary : #437485;
 }
 *{
     padding: 0;

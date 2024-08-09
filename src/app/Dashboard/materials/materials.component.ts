@@ -9,7 +9,7 @@ import { MaterialServiceService } from 'src/app/Service/material-service.service
 })
 export class MaterialsComponent implements OnInit {
 
-  displayedColumns: string[] = ['id', 'name', 'description', 'etat', 'insert_date', 'user', 'delete'];
+  displayedColumns: string[] = ['id', 'name', 'description', 'etat', 'insert_date', 'user', 'delete', 'update'];
   dataSource: Material[] = [];
 
   constructor(private materialService: MaterialServiceService) { }
@@ -35,6 +35,11 @@ export class MaterialsComponent implements OnInit {
     });
 
     this.loadMaterials();
+  }
+
+  updateMaterials(id: number): void {
+    console.log(`Update material with ID ${id}`);
+    // Implement your update logic here
   }
 
 }

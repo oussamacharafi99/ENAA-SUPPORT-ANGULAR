@@ -6,11 +6,31 @@
     <h1>ADMIN</h1>
   </div>
   <div class="menu-link">
-    <a routerLink="/dashboard" id="a1"><img src="../../../assets/icons/home.png" alt="">Dashboard</a>
-    <a routerLink="/tickets"><img src="../../../assets/icons/reserved.png" alt="">Tickets</a>
-    <a routerLink="/statistics"><img src="../../../assets/icons/statistics.png" alt="">Statistics</a>
-    <a routerLink="/dashboard/employees"><img src="../../../assets/icons/accountant.png" alt="">Employees</a>
-    <a routerLink="/settings"><img src="../../../assets/icons/setting.png" alt="">Settings</a>
+    <a routerLink="/dashboard" 
+       (click)="setActive('/dashboard')" 
+       [ngClass]="{'active': activeLink === '/dashboard'}">
+      <img src="../../../assets/icons/home.png" alt="">Dashboard
+    </a>
+    <a routerLink="/tickets" 
+       (click)="setActive('/tickets')" 
+       [ngClass]="{'active': activeLink === '/tickets'}">
+      <img src="../../../assets/icons/reserved.png" alt="">Tickets
+    </a>
+    <a routerLink="/statistics" 
+       (click)="setActive('/statistics')" 
+       [ngClass]="{'active': activeLink === '/statistics'}">
+      <img src="../../../assets/icons/statistics.png" alt="">Statistics
+    </a>
+    <a routerLink="/dashboard/employees" 
+       (click)="setActive('/dashboard/employees')" 
+       [ngClass]="{'active': activeLink === '/dashboard/employees'}">
+      <img src="../../../assets/icons/accountant.png" alt="">Employees
+    </a>
+    <a routerLink="/settings" 
+       (click)="setActive('/settings')" 
+       [ngClass]="{'active': activeLink === '/settings'}">
+      <img src="../../../assets/icons/setting.png" alt="">Settings
+    </a>
   </div>
   <app-logout></app-logout>
 </div>
