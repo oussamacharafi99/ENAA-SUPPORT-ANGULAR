@@ -42,36 +42,3 @@
     overflow-y: auto;
     box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.381) inset;
 }
-.hero-main-wrapper{
-    width: 100%;
-    height: 1000px;
-}
-.materials{
-    width: 100%;
-    padding: 10px;
-    border-radius: 10px;
-    background: #00000027;
-    box-shadow:  4px 4px 15px rgba(0, 0, 0, 0.237);
-}
-.materials > h5{
-    font-size: 17px;
-    color:white;
-    padding: 0 10px;
-}
-.hero-main-second{
-    width: 100%;
-    justify-content: space-between;
-}
-.insertmaterial{
-    margin-top: 20px;
-    width: 50%;
-    padding: 10px;
-    border-radius: 10px;
-    background: #00000027;
-    box-shadow:  4px 4px 15px rgba(0, 0, 0, 0.237);
-}
-.insertmaterial > h5{
-    font-size: 17px;
-    color:white;
-    padding: 0 10px;
-}

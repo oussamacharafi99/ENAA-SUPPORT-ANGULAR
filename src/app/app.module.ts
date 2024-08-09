@@ -16,6 +16,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialeModule } from './materiale/materiale.module';
 import { MaterialsComponent } from './Dashboard/materials/materials.component';
 import { AddMaterialComponent } from './Dashboard/add-material/add-material.component';
+import { EmployeesComponent } from './Dashboard/employees/employees.component';
+import { DashboardHomeComponent } from './Dashboard/dashboard-home/dashboard-home.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +29,9 @@ import { AddMaterialComponent } from './Dashboard/add-material/add-material.comp
     LogoutComponent,
     TicketsComponent,
     MaterialsComponent,
-    AddMaterialComponent
+    AddMaterialComponent,
+    EmployeesComponent,
+    DashboardHomeComponent
   ],
   imports: [
     BrowserModule,
