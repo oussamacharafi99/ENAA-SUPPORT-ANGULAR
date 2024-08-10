@@ -3,7 +3,7 @@
     color: #fff;
     margin: 10px 0;
     padding: 10px;
-    height: 300px;
+    max-height: 300px;
     width: 100%;
     overflow-y: auto;
     border-radius: 7px;
@@ -55,8 +55,55 @@ td.mat-cell {
     font-weight: 700;
     cursor: pointer;
 }
-#update:hover {
+#update:hover , form > button:hover{
     background: var(--color-secondary);
     color: white;
     border: 1px solid transparent;
+}
+
+.container{
+    width: 100%;
+    background: #42424200;
+    border-radius: 8px;
+    padding: 20px 10px;
+}
+.container > h5{
+    font-size: 17px;
+    color:white;
+    padding: 20px 0;
+}
+form{
+    width: 100%;
+    background: #4375852a;
+    padding: 20px 10px;
+    display: flex;
+}
+.group{
+    width: 45%;
+    display: flex;
+}
+.group > label{
+    color: white;
+    font-size: 13px ;
+    font-weight: 700;
+    padding: 5px;
+}
+.group > input{
+    padding: 6px 10px ;
+    border: 1px solid var(--color-secondary);
+    background: #43758510;
+    color: white;
+    border-radius: 5px;
+    width: 80%;
+}
+
+form > button{
+    padding: 6px;
+    border: 1px solid var(--color-secondary);
+    background: transparent;
+    color: var(--color-secondary);
+    border-radius: 5px;
+    font-weight: 700;
+    cursor: pointer;
+    margin-left: 10px;
 }

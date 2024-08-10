@@ -22,8 +22,8 @@ export class MaterialServiceService {
     return this.http.post<Material>(this._API_ADD_MATERIALS, material)
   }
 
-  updateMaterials(id : number , material : Material):Observable<Material>{
-    return this.http.put<Material>(this._API_ADD_MATERIALS +'/'+ id, material)
+  updateMaterials( material : Material):Observable<Material>{
+    return this.http.put<Material>(this._API_UPDATE_MATERIALS +'/'+ material.id, material)
   }
 
 

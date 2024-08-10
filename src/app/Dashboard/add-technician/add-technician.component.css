@@ -5,7 +5,7 @@ form{
     box-shadow: 4px 4px 15px #0000007d;
 }
 .group{
-    width: 80%;
+    width: 95%;
     margin: 3px;
 }
 label {
@@ -17,10 +17,10 @@ label {
 }
 .group > input {
     color: white;
-    border: 1px solid grey;
     padding: 10px 12px;
-    border-radius: 12px;
-    background: #de88b529;
+    border-radius: 8px;
+    border: 1px solid var(--color-secondary);
+    background: #43758510;
     width: 100%;
 }
 form > button{

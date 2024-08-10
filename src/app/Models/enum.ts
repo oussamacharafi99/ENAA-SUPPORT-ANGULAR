@@ -25,6 +25,7 @@ export enum PanneType {
 
 export enum MaterialEtat {
     NEW,
+    NEW_UPDATED,
     OUT_SERVICE,
     REPAIR
 }
