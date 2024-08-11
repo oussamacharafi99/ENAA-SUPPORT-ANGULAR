@@ -5,8 +5,7 @@
     width: 100%;
     padding: 10px;
     border-radius: 10px;
-    background: #00000027;
-    box-shadow:  4px 4px 15px rgba(0, 0, 0, 0.237);
+    background-color: #42424200;
 }
 .materials > h5{
     font-size: 17px;
@@ -19,11 +18,10 @@
 }
 .insertmaterial{
     margin-top: 20px;
-    width: 50%;
+    width: 100%;
     padding: 10px;
     border-radius: 10px;
-    background: #00000027;
-    box-shadow:  4px 4px 15px rgba(0, 0, 0, 0.237);
+    background-color: #42424200;
 }
 .insertmaterial > h5{
     font-size: 17px;

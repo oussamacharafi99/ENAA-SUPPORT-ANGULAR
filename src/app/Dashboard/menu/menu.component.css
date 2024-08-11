@@ -5,6 +5,7 @@
     top: 0;
     left: 0;
     background: #0000004f;
+    box-shadow: 4px 16px 15px #0000005a inset;
 }
 .logo{
     width: 50%;

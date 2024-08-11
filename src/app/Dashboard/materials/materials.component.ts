@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { MaterialEtat } from 'src/app/Models/enum';
 import { Material } from 'src/app/Models/material';
 import { MaterialServiceService } from 'src/app/Service/material-service.service';
 
@@ -31,11 +30,7 @@ export class MaterialsComponent implements OnInit {
 
   ngOnInit(): void {
     this.loadMaterials();
-    this.formUpdate = this.fb.group({
-      name: ['', Validators.required],
-      description: ['', Validators.required],
-      user: ['', Validators.required],
-    });
+    this.cleaning();
   }
 
   loadMaterials(): void {
@@ -82,11 +77,24 @@ export class MaterialsComponent implements OnInit {
       };
 
       this.materialService.updateMaterials(updatedMaterial).subscribe(() => {
+        this.dataSource
+        this.loadMaterials()
         console.log(`Material has been updated`);
       });
     } else {
       console.error('Form is not valid');
     }
-    this.loadMaterials();
+    this.cleaning()
   }
+
+  cleaning(){
+    this.formUpdate = this.fb.group({
+      name: ['', Validators.required],
+      description: ['', Validators.required],
+      user: ['', Validators.required],
+    });
+  }
+
+
+
 }

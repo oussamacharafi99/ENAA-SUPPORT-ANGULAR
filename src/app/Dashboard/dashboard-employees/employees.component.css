@@ -4,18 +4,51 @@
 .main{
     display: flex;
     justify-content: space-between;
+    background-color: #42424200;
 }
 
 .InsertUser , .InsertTechnician{
     width: 50%;
     padding: 10px;
     border-radius: 10px;
-    background: #00000027;
-    box-shadow:  4px 4px 15px rgba(0, 0, 0, 0.237);
+    background-color: #42424200;
     padding: 10px;
 }
 .InsertUser > h5 , .InsertTechnician > h5{
     font-size: 17px;
     color:white;
     padding: 0 10px;
+}
+
+.mat-elevation-z8 {
+    background-color: #42424200;
+    color: #fff;
+    margin: 10px 0;
+    padding: 10px;
+    max-height: 300px;
+    width: 95%;
+    overflow-y: auto;
+    border-radius: 7px;
+}
+
+table {
+    width: 100%;
+    min-width: 600px;
+    border-radius: 12px;
+    background: transparent;
+}
+
+th.mat-header-cell,
+td.mat-cell {
+    color: #fff;
+    background: transparent;
+    text-transform: uppercase;
+}
+
+th.mat-header-cell {
+    background-color: #4375852a;
+}
+
+td.mat-cell {
+    background-color: transparent;
 }

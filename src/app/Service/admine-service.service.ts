@@ -30,5 +30,4 @@ export class AdmineServiceService {
     return this.http.post<Technician>(this._API_ADD_TECHNICIAN, technician);
   }
 
-
 }

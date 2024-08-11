@@ -1,13 +1,51 @@
 <div class="hero-main-wrapper">
-    <div class="main">
-        <div class="InsertUser">
-            <h5>Insert User</h5>
-            <app-add-user></app-add-user>
+
+    <div class="main-table">
+        <div class="mat-elevation-z8">
+            <table mat-table [dataSource]="dataSource" class="mat-table">
+
+                <!-- ID Column -->
+                <ng-container matColumnDef="id">
+                    <th mat-header-cell *matHeaderCellDef>ID</th>
+                    <td mat-cell *matCellDef="let person">{{ person.id }}</td>
+                </ng-container>
+
+                <!-- Username Column -->
+                <ng-container matColumnDef="username">
+                    <th mat-header-cell *matHeaderCellDef>Username</th>
+                    <td mat-cell *matCellDef="let person">{{ person.username }}</td>
+                </ng-container>
+
+                <!-- Email Column -->
+                <ng-container matColumnDef="email">
+                    <th mat-header-cell *matHeaderCellDef>Email</th>
+                    <td mat-cell *matCellDef="let person">{{ person.email }}</td>
+                </ng-container>
+
+                <!-- Roles Column -->
+                <ng-container matColumnDef="roles">
+                    <th mat-header-cell *matHeaderCellDef>Roles</th>
+                    <td mat-cell *matCellDef="let person">
+                        <span *ngFor="let role of person.roles">{{ role }} </span>
+                    </td>
+                </ng-container>
+
+                <!-- Header and Row Definitions -->
+                <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+            </table>
         </div>
 
-        <div class="InsertTechnician">
-            <h5>Insert Technician</h5>
-            <app-add-technician></app-add-technician>
+        <div class="main">
+            <div class="InsertUser">
+                <h5>Insert User</h5>
+                <app-add-user></app-add-user>
+            </div>
+
+            <div class="InsertTechnician">
+                <h5>Insert Technician</h5>
+                <app-add-technician></app-add-technician>
+            </div>
         </div>
     </div>
-</div>

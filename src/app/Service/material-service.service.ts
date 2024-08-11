@@ -7,6 +7,7 @@ import { Material } from '../Models/material';
   providedIn: 'root'
 })
 export class MaterialServiceService {
+  [x: string]: any;
   constructor(private http: HttpClient) { }
 
   private _API_GET_MATERIALS = "http://localhost:9999/api/material/getall";

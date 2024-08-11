@@ -7,6 +7,7 @@ form{
 .group-group{
     width: 100%;
     display: flex;
+    justify-content: space-between;
 }
 .group{
     width: 49%;
@@ -20,16 +21,12 @@ label {
     font-weight: 700;
 }
 .group > input {
-    color: white;
-    padding: 10px 12px;
-    border-radius: 8px;
+    padding: 6px 10px ;
     border: 1px solid var(--color-secondary);
     background: #43758510;
-    width: 100%;
-}
-.groupText{
-    width: 100%;
-    margin: 3px;
+    color: white;
+    border-radius: 5px;
+    width: 95%;
 }
 textarea{
     color: white;
@@ -37,21 +34,66 @@ textarea{
     border-radius: 8px;
     border: 1px solid var(--color-secondary);
     background: #43758510;
-    width: 100%;
+    width: 95%;
 }
 form > button{
-    color: white;
-    border: 1px solid grey;
-    padding: 10px 12px;
-    border-radius: 10px;
-    background: #00000074;
-    font-weight: 800;
-    transition: .5s;
+    margin-top: 10px;
+    padding: 10px 6px;
+    border: 1px solid var(--color-secondary);
+    background: transparent;
+    color: var(--color-secondary);
+    border-radius: 5px;
+    font-weight: 700;
+    cursor: pointer;
 }
 form > button:hover{
-    color: var(--color-secondary);
+    background: var(--color-secondary);
+    color: white;
 }
 ::placeholder{
     color: rgba(255, 255, 255, 0.541);
     font-size: 14px;
+}
+mat-form-field{
+    width: 45%;
+    margin: 3px;
+    background: #43758510;
+    border-radius: 5px; 
+}
+
+.mat-form-field-wrapper { 
+    background: transparent;
+}
+
+.mat-form-field-flex {
+    background: #02167b; 
+    border-radius: 5px;
+    padding: 5px;
+    border: 5px solid rgb(255, 255, 255); 
+}
+
+.mat-form-field-label {
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.mat-select {
+    color: white;
+}
+
+.mat-select-placeholder {
+    color: rgba(255, 255, 255, 0.7); 
+}
+
+.mat-form-field-underline {
+    background-color: white; 
+}
+
+.mat-form-field-subscript-wrapper .mat-form-field-required-marker {
+    color: white; 
+}
+
+.mat-select-arrow {
+    color: white; 
 }

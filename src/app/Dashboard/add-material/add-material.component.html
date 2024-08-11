@@ -1,22 +1,33 @@
 <form [formGroup]="formMaterials" (ngSubmit)="addMaterials()">
+
+    <div class="group-group">
+        <mat-form-field>
+            <mat-label>Select User</mat-label>
+            <mat-select formControlName="user">
+                <mat-option *ngFor="let user of ListUsers" [value]="user.id">
+                    {{user.username}}
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+
+        <div class="group">
+            <label for="description">Description</label><br>
+            <textarea id="description" formControlName="description" placeholder="Enter the description"></textarea>
+        </div>
+    </div>
+
     <div class="group-group">
         <div class="group">
             <label for="name">Material Name</label><br>
             <input id="name" type="text" formControlName="name" placeholder="Enter the material name">
         </div>
+
         <div class="group">
             <label for="insert_date">Insertion Date</label><br>
             <input id="insert_date" type="date" formControlName="insert_date">
         </div>
     </div>
 
-
-    <div class="groupText">
-        <label for="description">Description</label><br>
-        <textarea id="description" formControlName="description" placeholder="Enter the description"></textarea>
-    </div>
-
-
-
     <button type="submit" [disabled]="!formMaterials.valid">Add Material</button>
 </form>
+  
