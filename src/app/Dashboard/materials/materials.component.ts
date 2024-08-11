@@ -20,17 +20,14 @@ export class MaterialsComponent implements OnInit {
     'update',
   ];
   dataSource: Material[] = [];
-  formUpdate!: FormGroup;
   idM!: number;
 
   constructor(
     private materialService: MaterialServiceService,
-    private fb: FormBuilder
   ) {}
 
   ngOnInit(): void {
     this.loadMaterials();
-    this.cleaning();
   }
 
   loadMaterials(): void {
@@ -49,52 +46,5 @@ export class MaterialsComponent implements OnInit {
     });
     this.loadMaterials();
   }
-
-  getAndReturnIdMaterials(idM: number): void {
-    this.idM = idM;
-    const material = this.dataSource.find((materiale) => materiale.id === idM);
-    if (material) {
-      this.formUpdate.patchValue({
-        id: material.id,
-        name: material.name,
-        description: material.description,
-        user: {
-          id: material.user.id,
-        },
-        tickets: [],
-        pannes: [],
-      });
-    } else {
-      console.error(`Material not found`);
-    }
-  }
-
-  updateMaterials(): void {
-    if (this.formUpdate.valid) {
-      const updatedMaterial = {
-        id: this.idM,
-        ...this.formUpdate.value,
-      };
-
-      this.materialService.updateMaterials(updatedMaterial).subscribe(() => {
-        this.dataSource
-        this.loadMaterials()
-        console.log(`Material has been updated`);
-      });
-    } else {
-      console.error('Form is not valid');
-    }
-    this.cleaning()
-  }
-
-  cleaning(){
-    this.formUpdate = this.fb.group({
-      name: ['', Validators.required],
-      description: ['', Validators.required],
-      user: ['', Validators.required],
-    });
-  }
-
-
 
 }

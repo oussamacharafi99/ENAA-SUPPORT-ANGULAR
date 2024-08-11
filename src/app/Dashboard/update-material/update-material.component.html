@@ -1,0 +1,18 @@
+<div class="container">
+    <h5>Update Materials</h5>
+    <form [formGroup]="formUpdate" (ngSubmit)="updateMaterials()">
+      <div class="group">
+        <label for="name">Name:</label>
+        <input id="name" formControlName="name" type="text" placeholder="the updated name of materials" />
+      </div>
+  
+      <div class="group">
+        <label for="description">Description:</label>
+        <input id="description" formControlName="description" type="text"
+          placeholder="the updated descriptionof materials" />
+      </div>
+  
+      <button type="submit">Submit</button>
+      <button id="clean" (click)="cleaning()">Clean</button>
+    </form>
+  </div>

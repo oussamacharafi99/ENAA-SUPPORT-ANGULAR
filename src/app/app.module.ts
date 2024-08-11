@@ -19,6 +19,9 @@ import { EmployeesComponent } from './Dashboard/dashboard-employees/employees.co
 import { DashboardHomeComponent } from './Dashboard/dashboard-home/dashboard-home.component';
 import { AddUserComponent } from './Dashboard/add-user/add-user.component';
 import { AddTechnicianComponent } from './Dashboard/add-technician/add-technician.component';
+import { TikcketsFialurComponent } from './Dashboard/tikckets-fialur/tikckets-fialur.component';
+import { TikcketsFixedComponent } from './Dashboard/tikckets-fixed/tikckets-fixed.component';
+import { UpdateMaterialComponent } from './Dashboard/update-material/update-material.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +37,10 @@ import { AddTechnicianComponent } from './Dashboard/add-technician/add-technicia
     EmployeesComponent,
     DashboardHomeComponent,
     AddUserComponent,
-    AddTechnicianComponent
+    AddTechnicianComponent,
+    TikcketsFialurComponent,
+    TikcketsFixedComponent,
+    UpdateMaterialComponent
   ],
   imports: [
     BrowserModule,
