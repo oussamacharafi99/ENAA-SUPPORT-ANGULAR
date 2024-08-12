@@ -8,3 +8,4 @@ export interface Panne {
     type: PanneType;
     tickets: Ticket[];
 }
+7
