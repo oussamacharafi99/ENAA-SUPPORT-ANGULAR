@@ -30,6 +30,7 @@ import { PannesComponent } from './Dashboard/PANNES-GROUP/pannes/pannes.componen
 import { DashboardUserComponent } from './User-dash/dashboard-user/dashboard-user.component';
 import { AddUserTicketComponent } from './User-dash/add-user-ticket/add-user-ticket.component';
 import { UserTicketComponent } from './User-dash/user-ticket/user-ticket.component';
+import { MenuUserComponent } from './User-dash/menu-user/menu-user.component';
 
 @NgModule({
   declarations: [
@@ -57,6 +58,7 @@ import { UserTicketComponent } from './User-dash/user-ticket/user-ticket.compone
     DashboardUserComponent,
     AddUserTicketComponent,
     UserTicketComponent,
+    MenuUserComponent,
   ],
   imports: [
     BrowserModule,
