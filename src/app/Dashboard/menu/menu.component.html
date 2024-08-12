@@ -26,10 +26,10 @@
        [ngClass]="{'active': activeLink === '/dashboard/employees'}">
       <img src="../../../assets/icons/accountant.png" alt="">Employees
     </a>
-    <a routerLink="/settings" 
-       (click)="setActive('/settings')" 
-       [ngClass]="{'active': activeLink === '/settings'}">
-      <img src="../../../assets/icons/setting.png" alt="">Settings
+    <a routerLink="/dashboard/panne" 
+       (click)="setActive('/dashboard/panne')" 
+       [ngClass]="{'active': activeLink === '/dashboard/panne'}">
+      <img src="../../../assets/icons/wrench.png" alt="">Pannes
     </a>
   </div>
   <app-logout></app-logout>

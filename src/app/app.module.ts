@@ -26,6 +26,7 @@ import { UpdateTicketByAdminComponent } from './Dashboard/TICKET-GROUP/update-ti
 import { TikcketsProcessingComponent } from './Dashboard/TICKET-GROUP/tikckets-processing/tikckets-processing.component';
 import { DashboardPanneComponent } from './Dashboard/PANNES-GROUP/dashboard-panne/dashboard-panne.component';
 import { AddPanneComponent } from './Dashboard/PANNES-GROUP/add-panne/add-panne.component';
+import { PannesComponent } from './Dashboard/PANNES-GROUP/pannes/pannes.component';
 
 @NgModule({
   declarations: [
@@ -49,6 +50,7 @@ import { AddPanneComponent } from './Dashboard/PANNES-GROUP/add-panne/add-panne.
     TikcketsProcessingComponent,
     DashboardPanneComponent,
     AddPanneComponent,
+    PannesComponent,
   ],
   imports: [
     BrowserModule,
