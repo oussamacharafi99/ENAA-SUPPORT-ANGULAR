@@ -1,0 +1,8 @@
+<form [formGroup]="formUpdate" (ngSubmit)="updateTicket()">
+    <label for="idTechnician">Technician</label>
+    <select formControlName="idTechnician">
+      <option *ngFor="let person of ListUsers" [value]="person.id">{{ person.username }}</option>
+    </select>
+    <button type="submit" [disabled]="formUpdate.invalid">Update Ticket</button>
+  </form>
+  

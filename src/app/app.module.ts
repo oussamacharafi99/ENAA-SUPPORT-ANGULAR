@@ -10,18 +10,22 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DashboardComponent } from './Dashboard/dashboard/dashboard.component';
 import { MenuComponent } from './Dashboard/menu/menu.component';
 import { LogoutComponent } from './logout/logout.component';
-import { TicketsComponent } from './Dashboard/tickets/tickets.component';
+import { TicketsComponent } from './Dashboard/TICKET-GROUP/tickets/tickets.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialeModule } from './materiale/materiale.module';
-import { MaterialsComponent } from './Dashboard/materials/materials.component';
-import { AddMaterialComponent } from './Dashboard/add-material/add-material.component';
-import { EmployeesComponent } from './Dashboard/dashboard-employees/employees.component';
-import { DashboardHomeComponent } from './Dashboard/dashboard-home/dashboard-home.component';
-import { AddUserComponent } from './Dashboard/add-user/add-user.component';
-import { AddTechnicianComponent } from './Dashboard/add-technician/add-technician.component';
-import { TikcketsFialurComponent } from './Dashboard/tikckets-fialur/tikckets-fialur.component';
-import { TikcketsFixedComponent } from './Dashboard/tikckets-fixed/tikckets-fixed.component';
-import { UpdateMaterialComponent } from './Dashboard/update-material/update-material.component';
+import { MaterialsComponent } from './Dashboard/MATERIALS-GROUP/materials/materials.component';
+import { AddMaterialComponent } from './Dashboard/MATERIALS-GROUP/add-material/add-material.component';
+import { EmployeesComponent } from './Dashboard/PERSONS-GROUP/dashboard-employees/employees.component';
+import { DashboardHomeComponent } from './Dashboard/MATERIALS-GROUP/dashboard-home/dashboard-home.component';
+import { AddUserComponent } from './Dashboard/PERSONS-GROUP/add-user/add-user.component';
+import { AddTechnicianComponent } from './Dashboard/PERSONS-GROUP/add-technician/add-technician.component';
+import { TikcketsFialurComponent } from './Dashboard/TICKET-GROUP/tikckets-fialur/tikckets-fialur.component';
+import { TikcketsFixedComponent } from './Dashboard/TICKET-GROUP/tikckets-fixed/tikckets-fixed.component';
+import { UpdateMaterialComponent } from './Dashboard/MATERIALS-GROUP/update-material/update-material.component';
+import { UpdateTicketByAdminComponent } from './Dashboard/TICKET-GROUP/update-ticket-by-admin/update-ticket-by-admin.component';
+import { TikcketsProcessingComponent } from './Dashboard/TICKET-GROUP/tikckets-processing/tikckets-processing.component';
+import { DashboardPanneComponent } from './Dashboard/PANNES-GROUP/dashboard-panne/dashboard-panne.component';
+import { AddPanneComponent } from './Dashboard/PANNES-GROUP/add-panne/add-panne.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +44,11 @@ import { UpdateMaterialComponent } from './Dashboard/update-material/update-mate
     AddTechnicianComponent,
     TikcketsFialurComponent,
     TikcketsFixedComponent,
-    UpdateMaterialComponent
+    UpdateMaterialComponent,
+    UpdateTicketByAdminComponent,
+    TikcketsProcessingComponent,
+    DashboardPanneComponent,
+    AddPanneComponent,
   ],
   imports: [
     BrowserModule,
@@ -49,7 +57,8 @@ import { UpdateMaterialComponent } from './Dashboard/update-material/update-mate
     FormsModule,
     ReactiveFormsModule,
     BrowserAnimationsModule,
-    MaterialeModule
+    MaterialeModule,
+    
   ],
   providers: [
     {

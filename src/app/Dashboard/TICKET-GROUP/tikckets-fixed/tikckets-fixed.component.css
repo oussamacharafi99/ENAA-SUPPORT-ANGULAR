@@ -47,3 +47,6 @@ th.mat-header-cell {
 td.mat-cell {
     background-color: transparent;
 }
+#status{
+  color: rgb(84, 189, 255);
+}

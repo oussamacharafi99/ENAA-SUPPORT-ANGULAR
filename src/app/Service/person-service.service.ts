@@ -13,6 +13,7 @@ export class PersonServiceService {
 
   _API_GET_PERSONS = "http://localhost:9999/api/auth/get_persons_dto";
   _API_GET_PERSONS_WITHOUT_ADMIN = "http://localhost:9999/api/auth/get_Person";
+  _API_GET_TECHNICIANS ="http://localhost:9999/api/auth/get_technicians"
 
   get_persons():Observable<PersonDto[]>{
     return this.http.get<PersonDto[]>(this._API_GET_PERSONS)
@@ -21,5 +22,9 @@ export class PersonServiceService {
   getPersonsWithoutAdmin():Observable<Person[]>{
      return this.http.get<Person[]>(this._API_GET_PERSONS_WITHOUT_ADMIN)
   }
+
+  getTichnicians():Observable<Person[]>{
+    return this.http.get<Person[]>(this._API_GET_TECHNICIANS)
+ }
 
 }

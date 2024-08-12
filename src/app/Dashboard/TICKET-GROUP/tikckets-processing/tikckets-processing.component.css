@@ -36,6 +36,8 @@ td.mat-cell {
     color: #fff;
     background: transparent;
     text-transform: uppercase;
+    font-size: 12px;
+    padding: 5px;
 }
 
 th.mat-header-cell {
@@ -45,18 +47,6 @@ th.mat-header-cell {
 td.mat-cell {
     background-color: transparent;
 }
-#update{
-    padding: 6px;
-    border: 1px solid var(--color-secondary);
-    background: transparent;
-    color: var(--color-secondary);
-    border-radius: 5px;
-    font-weight: 700;
-    cursor: pointer;
+#status{
+  color: greenyellow;
 }
-#update:hover , form > button:hover{
-    background: var(--color-secondary);
-    color: white;
-    border: 1px solid transparent;
-}
-

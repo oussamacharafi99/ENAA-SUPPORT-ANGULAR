@@ -1,15 +1,14 @@
 <form [formGroup]="formMaterials" (ngSubmit)="addMaterials()">
 
     <div class="group-group">
-        <mat-form-field>
-            <mat-label>Select User</mat-label>
-            <mat-select formControlName="user">
-                <mat-option *ngFor="let user of ListUsers" [value]="user.id">
-                    {{user.username}}
-                </mat-option>
-            </mat-select>
-        </mat-form-field>
-
+        <div class="group">
+            <label>Select User</label>
+            <div class="select">
+                <select id="mySelect" formControlName="user">
+                    <option *ngFor="let user of ListUsers" [value]="user.id">{{user.username}}</option>
+                </select>
+            </div>
+        </div>
         <div class="group">
             <label for="description">Description</label><br>
             <textarea id="description" formControlName="description" placeholder="Enter the description"></textarea>
