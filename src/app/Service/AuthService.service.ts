@@ -12,7 +12,6 @@ export class AuthService {
     if (storedJwtData) {
       const jwtData = JSON.parse(storedJwtData);
       const token = jwtData.token;
-      
       return !!token;
     }
     return false;
