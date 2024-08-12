@@ -50,9 +50,9 @@ export class LoginComponent implements OnInit {
           if (decodedToken.roles && decodedToken.roles.includes(Role[Role.ROLE_ADMIN])) {
             console.log("Admin role detected:", decodedToken.roles);
             this.router.navigateByUrl('dashboard');
-          } else if (decodedToken.roles && decodedToken.roles.includes(Role[Role.ROLE_TECHNICIAN])) {
+          } else if (decodedToken.roles && decodedToken.roles.includes(Role[Role.ROLE_USER])) {
             console.log("Technician role detected:", decodedToken.roles);
-            this.router.navigate(['']);
+            this.router.navigateByUrl('userDash');
           } else {
             console.log("Other role detected:", decodedToken.roles);
             this.router.navigate(['']);

@@ -1,1 +1,13 @@
+<form [formGroup]="formPanne" (ngSubmit)="submit()">
+    <div class="group">
+        <label for="type">Panne Type</label><br>
+        <input id="type" type="text" formControlName="type" placeholder="Enter the Type Panne">
+    </div>
 
+    <div class="group">
+        <label for="description">Panne Description </label><br>
+        <input id="description" type="text" formControlName="description" placeholder="Enter the description Panne" >
+    </div>
+
+    <button type="submit"  [disabled]="!formPanne.valid">submit</button>
+</form>

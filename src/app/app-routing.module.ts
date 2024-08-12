@@ -12,24 +12,33 @@ import { UpdateTicketByAdminComponent } from './Dashboard/TICKET-GROUP/update-ti
 import { DashboardPanneComponent } from './Dashboard/PANNES-GROUP/dashboard-panne/dashboard-panne.component';
 import { PannesComponent } from './Dashboard/PANNES-GROUP/pannes/pannes.component';
 import { AddPanneComponent } from './Dashboard/PANNES-GROUP/add-panne/add-panne.component';
+import { DashboardUserComponent } from './User-dash/dashboard-user/dashboard-user.component';
+import { UserTicketComponent } from './User-dash/user-ticket/user-ticket.component';
+import { AddUserComponent } from './Dashboard/PERSONS-GROUP/add-user/add-user.component';
+import { AddUserTicketComponent } from './User-dash/add-user-ticket/add-user-ticket.component';
+import { AuthGuard } from './Service/auth-guard.guard';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
   {
-    path: 'dashboard', component: DashboardComponent, children: [
+    path: 'dashboard', component: DashboardComponent, canActivate: [AuthGuard], children: [
       {path:'',component:DashboardHomeComponent, children:[
         {path: '', component: MaterialsComponent },
         {path: 'update/:id', component: UpdateMaterialComponent },
       ]},
       { path: 'employees', component: EmployeesComponent },
 
-      { path: 'tickets', component: TicketsComponent, children:[
+      { path: 'tickets', component: TicketsComponent, canActivate: [AuthGuard], children:[
         {path: '', component: TikcketsFialurComponent },
         {path: 'update/:id', component: UpdateTicketByAdminComponent },
       ]},
-      { path: 'panne', component: DashboardPanneComponent}
+      { path: 'panne', component: DashboardPanneComponent, canActivate: [AuthGuard] }
     ]
-  }
+  },
+  { path: 'userDash', component: DashboardUserComponent, children:[
+        {path: '', component: UserTicketComponent },
+        {path: 'addTicket', component: AddUserTicketComponent },
+  ]},
 ];
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

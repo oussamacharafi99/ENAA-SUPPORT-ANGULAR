@@ -27,6 +27,10 @@ import { TikcketsProcessingComponent } from './Dashboard/TICKET-GROUP/tikckets-p
 import { DashboardPanneComponent } from './Dashboard/PANNES-GROUP/dashboard-panne/dashboard-panne.component';
 import { AddPanneComponent } from './Dashboard/PANNES-GROUP/add-panne/add-panne.component';
 import { PannesComponent } from './Dashboard/PANNES-GROUP/pannes/pannes.component';
+import { DashboardUserComponent } from './User-dash/dashboard-user/dashboard-user.component';
+import { AddUserTicketComponent } from './User-dash/add-user-ticket/add-user-ticket.component';
+import { UserTicketComponent } from './User-dash/user-ticket/user-ticket.component';
+import { MenuUserComponent } from './User-dash/menu-user/menu-user.component';
 
 @NgModule({
   declarations: [
@@ -51,6 +55,10 @@ import { PannesComponent } from './Dashboard/PANNES-GROUP/pannes/pannes.componen
     DashboardPanneComponent,
     AddPanneComponent,
     PannesComponent,
+    DashboardUserComponent,
+    AddUserTicketComponent,
+    UserTicketComponent,
+    MenuUserComponent,
   ],
   imports: [
     BrowserModule,
