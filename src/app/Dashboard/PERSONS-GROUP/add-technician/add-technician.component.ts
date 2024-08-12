@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Technician } from 'src/app/Models/technician';
 import { AdmineServiceService } from 'src/app/Service/admine-service.service';
+import { PersonServiceService } from 'src/app/Service/person-service.service';
 
 @Component({
   selector: 'app-add-technician',
@@ -11,7 +12,7 @@ import { AdmineServiceService } from 'src/app/Service/admine-service.service';
 export class AddTechnicianComponent implements OnInit {
   formAddTechnician!: FormGroup;
 
-  constructor(private service: AdmineServiceService, private fb: FormBuilder) { }
+  constructor(private service: PersonServiceService, private fb: FormBuilder) { }
 
   ngOnInit(): void {
     this.formAddTechnician = this.fb.group({

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { User } from 'src/app/Models/user';
 import { AdmineServiceService } from 'src/app/Service/admine-service.service';
+import { PersonServiceService } from 'src/app/Service/person-service.service';
 
 @Component({
   selector: 'app-add-user',
@@ -11,7 +12,7 @@ import { AdmineServiceService } from 'src/app/Service/admine-service.service';
 export class AddUserComponent implements OnInit {
   formAddUser!: FormGroup;
 
-  constructor(private service: AdmineServiceService, private fb: FormBuilder) { }
+  constructor(private service: PersonServiceService, private fb: FormBuilder) { }
 
   ngOnInit(): void {
     this.formAddUser = this.fb.group({

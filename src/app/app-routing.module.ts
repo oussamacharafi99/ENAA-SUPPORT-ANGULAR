@@ -9,6 +9,9 @@ import { UpdateMaterialComponent } from './Dashboard/MATERIALS-GROUP/update-mate
 import { MaterialsComponent } from './Dashboard/MATERIALS-GROUP/materials/materials.component';
 import { TikcketsFialurComponent } from './Dashboard/TICKET-GROUP/tikckets-fialur/tikckets-fialur.component';
 import { UpdateTicketByAdminComponent } from './Dashboard/TICKET-GROUP/update-ticket-by-admin/update-ticket-by-admin.component';
+import { DashboardPanneComponent } from './Dashboard/PANNES-GROUP/dashboard-panne/dashboard-panne.component';
+import { PannesComponent } from './Dashboard/PANNES-GROUP/pannes/pannes.component';
+import { AddPanneComponent } from './Dashboard/PANNES-GROUP/add-panne/add-panne.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -23,7 +26,8 @@ const routes: Routes = [
       { path: 'tickets', component: TicketsComponent, children:[
         {path: '', component: TikcketsFialurComponent },
         {path: 'update/:id', component: UpdateTicketByAdminComponent },
-      ]}
+      ]},
+      { path: 'panne', component: DashboardPanneComponent}
     ]
   }
 ];

@@ -4,7 +4,7 @@
     background: red;
     padding: 20px;
     border: 2px solid black;
-    background: rgba(0, 0, 0, 0.075);
+    background: rgba(255, 255, 255, 0.514);
     backdrop-filter: blur(30px);
     border-radius: 16px;
     box-shadow: 12px 12px 15px rgba(0, 0, 0, 0.142);
@@ -20,13 +20,13 @@
 .group > label{
     font-size: 13px;
     font-weight: 800;
-    color: #DE88B5;
+    color: var(--color-secondary);
     text-transform: uppercase;
 }
 .group > .icon-input{
     width: 100%;
     border-radius: 7px;
-    border: 1px solid #DE88B5;
+    border: 1px solid var(--color-secondary);
     display: flex;
     align-items: center;
     padding: 5px 10px;
@@ -47,7 +47,7 @@ form > button{
     border: 1px solid black;
     background: rgba(0, 0, 0, 0.187);
     backdrop-filter: blur(10px);
-    color: #ffc2bb;
+    color: var(--color-secondary);
     padding: 7px 10px;
     font-weight: 800;
     margin-top: 10px;
@@ -57,7 +57,7 @@ form > button{
 }
 form > button:hover{
     border: 1px solid transparent;
-    color: #ffc2bb;
+    color: var(--color-secondary);
     background: black;
 }
 
