@@ -7,7 +7,7 @@ import { TicketStatus } from './enum';
 export interface Ticket {
     id: number;
     description: string;
-    dateCreation: Date;
+    dateCreation: string;
     status: TicketStatus;
     technicalDescription: string;
     panne: Panne;
@@ -15,3 +15,4 @@ export interface Ticket {
     technician: Technician;
     material: Material;
 }
+
