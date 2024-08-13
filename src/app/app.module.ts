@@ -35,6 +35,7 @@ import { DashboardTechnicianComponent } from './Technician-dash/dashboard-techni
 import { TikcketsProcessingTechnicianComponent } from './Technician-dash/tikckets-processing-technician/tikckets-processing-technician.component';
 import { TikcketsFixedTechnicianComponent } from './Technician-dash/tikckets-fixed-technician/tikckets-fixed-technician.component';
 import { UpdateTicketsTechnicianComponent } from './Technician-dash/update-tickets-technician/update-tickets-technician.component';
+import { MenuTechnicianComponent } from './Technician-dash/menu-technician/menu-technician.component';
 
 @NgModule({
   declarations: [
@@ -67,6 +68,7 @@ import { UpdateTicketsTechnicianComponent } from './Technician-dash/update-ticke
     TikcketsProcessingTechnicianComponent,
     TikcketsFixedTechnicianComponent,
     UpdateTicketsTechnicianComponent,
+    MenuTechnicianComponent,
   ],
   imports: [
     BrowserModule,

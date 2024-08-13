@@ -17,6 +17,9 @@ import { UserTicketComponent } from './User-dash/user-ticket/user-ticket.compone
 import { AddUserComponent } from './Dashboard/PERSONS-GROUP/add-user/add-user.component';
 import { AddUserTicketComponent } from './User-dash/add-user-ticket/add-user-ticket.component';
 import { AuthGuard } from './Service/auth-guard.guard';
+import { DashboardTechnicianComponent } from './Technician-dash/dashboard-technician/dashboard-technician.component';
+import { TikcketsProcessingTechnicianComponent } from './Technician-dash/tikckets-processing-technician/tikckets-processing-technician.component';
+import { UpdateTicketsTechnicianComponent } from './Technician-dash/update-tickets-technician/update-tickets-technician.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -39,6 +42,10 @@ const routes: Routes = [
         {path: '', component: UserTicketComponent },
         {path: 'addTicket', component: AddUserTicketComponent },
   ]},
+  { path: 'technicianDash', component: DashboardTechnicianComponent, children:[
+    {path: '', component: TikcketsProcessingTechnicianComponent },
+    {path: 'update/:id', component: UpdateTicketsTechnicianComponent },
+]}
 ];
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

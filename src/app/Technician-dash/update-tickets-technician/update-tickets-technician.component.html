@@ -1,1 +1,8 @@
-<p>update-tickets-technician works!</p>
+<form [formGroup]="formUpdate" (ngSubmit)="updateTicket()">
+    <div class="group">
+        <label for="technicalDescription">Your Answer</label><br>
+        <textarea id="technicalDescription" formControlName="technicalDescription" placeholder="Insert your Response"></textarea>
+    </div>
+    <button type="submit" [disabled]="formUpdate.invalid">Send</button>
+</form>
+  

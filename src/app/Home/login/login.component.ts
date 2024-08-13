@@ -10,7 +10,7 @@ import { AdmineServiceService } from 'src/app/Service/admine-service.service';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
-  styleUrls: ['./login.component.css']
+  styleUrls: ['./login.component.css'],
 })
 export class LoginComponent implements OnInit {
   formLogin!: FormGroup;
@@ -22,7 +22,6 @@ export class LoginComponent implements OnInit {
     private service: AdmineServiceService,
     private router: Router
   ) {
-
     this.formLogin = this.fb.group({
       username: ['', Validators.required],
       password: ['', Validators.required],
@@ -40,26 +39,32 @@ export class LoginComponent implements OnInit {
   onSubmit() {
     if (this.formLogin.valid) {
       const person: Person = this.formLogin.value;
-      this.service.login(person).subscribe(
-         res => {
-          localStorage.setItem('jwtData', JSON.stringify(res));
-  
-          const decodedToken: any = jwtDecode(res.token);
-          console.log('Decoded Token:', decodedToken);
-  
-          if (decodedToken.roles && decodedToken.roles.includes(Role[Role.ROLE_ADMIN])) {
-            console.log("Admin role detected:", decodedToken.roles);
-            this.router.navigateByUrl('dashboard');
-          } else if (decodedToken.roles && decodedToken.roles.includes(Role[Role.ROLE_USER])) {
-            console.log("Technician role detected:", decodedToken.roles);
-            this.router.navigateByUrl('userDash');
-          } else {
-            console.log("Other role detected:", decodedToken.roles);
-            this.router.navigate(['']);
-          }
-        })
-     
-      
+      this.service.login(person).subscribe((res) => {
+        localStorage.setItem('jwtData', JSON.stringify(res));
+
+        const decodedToken: any = jwtDecode(res.token);
+        console.log('Decoded Token:', decodedToken);
+
+        if (
+          decodedToken.roles &&
+          decodedToken.roles.includes(Role[Role.ROLE_ADMIN])
+        ) {
+          this.router.navigateByUrl('dashboard');
+        } else if (
+          decodedToken.roles &&
+          decodedToken.roles.includes(Role[Role.ROLE_USER])
+        ) {
+          this.router.navigateByUrl('userDash');
+        } else if (
+          decodedToken.roles &&
+          decodedToken.roles.includes(Role[Role.ROLE_TECHNICIAN])
+        ) {
+          this.router.navigateByUrl('technicianDash');
+        } else {
+          console.log('Other role detected:', decodedToken.roles);
+          this.router.navigate(['']);
+        }
+      });
     } else {
       this.errorMessage = 'all required fields.';
       console.log('Form is invalid.');

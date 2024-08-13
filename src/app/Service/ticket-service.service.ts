@@ -4,6 +4,7 @@ import { Observable } from 'rxjs';
 import { TicketDto } from '../Models/dto/TicketDto';
 import { Ticket } from '../Models/ticket';
 import { TicketsTechnicianIdDto } from '../Models/dto/TicketsTechnicianIdDto';
+import { TicketsTechnicalDescriptionDto } from '../Models/dto/TicketsTechnicalDescriptionDto';
 
 @Injectable({
   providedIn: 'root'
@@ -17,6 +18,7 @@ export class TicketServiceService {
   _API_GET_FAILUR = "http://localhost:9999/api/ticket/get_tickets_failure"
   _API_GET_PROCESSING = "http://localhost:9999/api/ticket/get_tickets_processing"
   _API_UPDATE = "http://localhost:9999/api/ticket/update_by_admin"
+  _API_UPDATE_BY_TECHNICIAN = "http://localhost:9999/api/ticket/update_by_technician"
   _API_GET_TICKETS_BY_USER_ID = "http://localhost:9999/api/ticket/get_user_tickets"
   _API_ADD_TICKETS_BY_USER = "http://localhost:9999/api/ticket/add"
   _API_GET_FIXED_BY_TECHNICIAN = "http://localhost:9999/api/ticket/get_tickets_fixed"
@@ -52,4 +54,8 @@ export class TicketServiceService {
   getAllTicketsProcessingByTechnician(id : number):Observable<TicketDto[]>{
     return this.http.get<TicketDto[]>(this._API_GET_PROCESSING_BY_TECHNICIAN + '/' + id)
    }
+
+   updateTicketsByTechnician(id : number, ticket : TicketsTechnicalDescriptionDto ):Observable<TicketsTechnicalDescriptionDto>{
+    return this.http.put<TicketsTechnicalDescriptionDto>(this._API_UPDATE_BY_TECHNICIAN + '/' + id , ticket)
+}
 }
