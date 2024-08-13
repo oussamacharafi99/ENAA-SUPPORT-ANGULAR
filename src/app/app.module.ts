@@ -31,6 +31,10 @@ import { DashboardUserComponent } from './User-dash/dashboard-user/dashboard-use
 import { AddUserTicketComponent } from './User-dash/add-user-ticket/add-user-ticket.component';
 import { UserTicketComponent } from './User-dash/user-ticket/user-ticket.component';
 import { MenuUserComponent } from './User-dash/menu-user/menu-user.component';
+import { DashboardTechnicianComponent } from './Technician-dash/dashboard-technician/dashboard-technician.component';
+import { TikcketsProcessingTechnicianComponent } from './Technician-dash/tikckets-processing-technician/tikckets-processing-technician.component';
+import { TikcketsFixedTechnicianComponent } from './Technician-dash/tikckets-fixed-technician/tikckets-fixed-technician.component';
+import { UpdateTicketsTechnicianComponent } from './Technician-dash/update-tickets-technician/update-tickets-technician.component';
 
 @NgModule({
   declarations: [
@@ -59,6 +63,10 @@ import { MenuUserComponent } from './User-dash/menu-user/menu-user.component';
     AddUserTicketComponent,
     UserTicketComponent,
     MenuUserComponent,
+    DashboardTechnicianComponent,
+    TikcketsProcessingTechnicianComponent,
+    TikcketsFixedTechnicianComponent,
+    UpdateTicketsTechnicianComponent,
   ],
   imports: [
     BrowserModule,

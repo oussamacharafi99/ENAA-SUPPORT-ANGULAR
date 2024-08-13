@@ -18,6 +18,8 @@ import { MatFormFieldModule } from '@angular/material/form-field';
     MatInputModule,
     MatFormFieldModule,
     MatSelectModule,
+    MatTableModule,
+    MatButtonModule,
   ],
   exports: [
     MatCardModule,
@@ -25,7 +27,9 @@ import { MatFormFieldModule } from '@angular/material/form-field';
     MatInputModule,
     MatFormFieldModule,
     MatSelectModule,
-    MatTableModule
+    MatTableModule,
+    MatTableModule,
+    MatButtonModule,
   ]
 })
 export class MaterialeModule { }
