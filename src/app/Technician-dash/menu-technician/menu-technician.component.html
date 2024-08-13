@@ -1,0 +1,17 @@
+<div class="menu">
+    <div class="logo">
+        <h1>DASHBOARD</h1>
+      </div>
+      <div class="username">
+        <h1>USER</h1>
+      </div>
+    <div class="menu-link">
+      <a routerLink="/technicianDash" 
+         (click)="setActive('/technicianDash')" 
+         [ngClass]="{'active': activeLink === '/technicianDash'}">
+        <img src="../../../assets/icons/home.png" alt="">Dashboard
+      </a>
+    </div><br><br><br><br><br><br><br><br><br>
+    <app-logout></app-logout>
+ </div>
+  
