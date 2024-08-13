@@ -18,6 +18,7 @@ export class TicketServiceService {
   _API_GET_PROCESSING = "http://localhost:9999/api/ticket/get_tickets_processing"
   _API_UPDATE = "http://localhost:9999/api/ticket/update_by_admin"
   _API_GET_TICKETS_BY_USER_ID = "http://localhost:9999/api/ticket/get_user_tickets"
+  _API_ADD_TICKETS_BY_USER = "http://localhost:9999/api/ticket/add"
 
   getAllTicketsFailur():Observable<TicketDto[]>{
       return this.http.get<TicketDto[]>(this._API_GET_FAILUR)
@@ -37,5 +38,8 @@ export class TicketServiceService {
 
   getTicketByUderId(id : number):Observable<TicketDto[]>{
     return this.http.get<TicketDto[]>(this._API_GET_TICKETS_BY_USER_ID + '/' + id);
+  }
+  addTickets(ticket : Ticket):Observable<Ticket>{
+      return this.http.post<Ticket>(this._API_ADD_TICKETS_BY_USER , ticket);
   }
 }

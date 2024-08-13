@@ -3,9 +3,9 @@ import { Ticket } from './ticket';
 
 export interface Panne {
     id: number;
-    date: Date;
+    date: string;
     description: string;
-    type: PanneType;
+    type: string
     tickets: Ticket[];
 }
 7

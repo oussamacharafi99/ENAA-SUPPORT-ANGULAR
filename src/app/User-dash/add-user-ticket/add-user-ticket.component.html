@@ -1,1 +1,33 @@
-<p>add-user-ticket works!</p>
+<form [formGroup]="formTickets" (ngSubmit)="addTicket()">
+    <div class="group-group">
+      <div class="group">
+        <label for="panne">Popular Pannes</label>
+        <div class="select">
+          <select id="panne" formControlName="panne">
+            <option>Select Panne</option>
+            <option *ngFor="let panne of ListPannes" value="{{panne.id}}">{{panne.type}}</option>
+          </select>
+        </div>
+      </div>
+  
+      <div class="group">
+        <label for="description">Description</label><br>
+        <textarea id="description" formControlName="description" placeholder="Enter the description"></textarea>
+      </div>
+    </div>
+  
+    <div class="group-group">
+      <div class="group">
+        <label for="material">Your Materials</label>
+        <div class="select">
+          <select id="material" formControlName="material">
+            <option>Select Material</option>
+            <option *ngFor="let material of ListMaterials"value="{{material.id}}">{{material.name}}</option>
+          </select>
+        </div>
+      </div>
+    </div>
+  
+    <button type="submit" [disabled]="!formTickets.valid">Add Ticket</button>
+  </form>
+  
