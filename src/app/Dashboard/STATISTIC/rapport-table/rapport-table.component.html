@@ -1,0 +1,48 @@
+<div class="mat-elevation-z8">
+    <table mat-table [dataSource]="dataSource" class="mat-table">
+
+        <!-- Username Column -->
+        <ng-container matColumnDef="materialName">
+            <th mat-header-cell *matHeaderCellDef>Material Name</th>
+            <td mat-cell *matCellDef="let historic">{{ historic.material.name }}</td>
+        </ng-container>
+
+        <!-- Description Column -->
+        <ng-container matColumnDef="panneType">
+            <th mat-header-cell *matHeaderCellDef>Panne Type</th>
+            <td mat-cell *matCellDef="let historic">{{ historic.panne.type }}</td>
+        </ng-container>
+
+        <!-- Date Creation Column -->
+        <ng-container matColumnDef="startDate">
+            <th mat-header-cell *matHeaderCellDef>Date Creation</th>
+            <td mat-cell *matCellDef="let historic">{{ historic.startDate | date }}</td>
+        </ng-container>
+
+        <!-- Status Column -->
+        <ng-container matColumnDef="endDate">
+            <th mat-header-cell *matHeaderCellDef>End Date</th>
+            <td mat-cell *matCellDef="let historic"  id="status">{{ historic.endDate }}</td>
+        </ng-container>
+
+        <!-- Technical Name Column -->
+        <ng-container matColumnDef="description">
+            <th mat-header-cell *matHeaderCellDef>Description</th>
+            <td mat-cell *matCellDef="let historic">{{ historic.description }}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="download">
+            <th mat-header-cell *matHeaderCellDef>download</th>
+            <td mat-cell *matCellDef="let historic">
+                <button id="download" id="download" (click)="downloading(historic.material.id)">
+                    download
+                </button>
+            </td>
+        </ng-container>
+
+        <!-- Header and Row Definitions -->
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+    </table>
+  </div>

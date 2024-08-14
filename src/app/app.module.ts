@@ -9,10 +9,10 @@ import { InterceptorAuth } from './Service/auth_Interceptor.service';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DashboardComponent } from './Dashboard/dashboard/dashboard.component';
 import { MenuComponent } from './Dashboard/menu/menu.component';
-import { LogoutComponent } from './logout/logout.component';
+import { LogoutComponent } from './Logout/logout.component';
 import { TicketsComponent } from './Dashboard/TICKET-GROUP/tickets/tickets.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MaterialeModule } from './materiale/materiale.module';
+import { MaterialeModule } from './Angular-materiale/materiale.module';
 import { MaterialsComponent } from './Dashboard/MATERIALS-GROUP/materials/materials.component';
 import { AddMaterialComponent } from './Dashboard/MATERIALS-GROUP/add-material/add-material.component';
 import { EmployeesComponent } from './Dashboard/PERSONS-GROUP/dashboard-employees/employees.component';
@@ -36,6 +36,8 @@ import { TikcketsProcessingTechnicianComponent } from './Technician-dash/tikcket
 import { TikcketsFixedTechnicianComponent } from './Technician-dash/tikckets-fixed-technician/tikckets-fixed-technician.component';
 import { UpdateTicketsTechnicianComponent } from './Technician-dash/update-tickets-technician/update-tickets-technician.component';
 import { MenuTechnicianComponent } from './Technician-dash/menu-technician/menu-technician.component';
+import { RapportTableComponent } from './Dashboard/STATISTIC/rapport-table/rapport-table.component';
+import { StatisticComponent } from './Dashboard/STATISTIC/statistic/statistic.component';
 
 @NgModule({
   declarations: [
@@ -69,6 +71,8 @@ import { MenuTechnicianComponent } from './Technician-dash/menu-technician/menu-
     TikcketsFixedTechnicianComponent,
     UpdateTicketsTechnicianComponent,
     MenuTechnicianComponent,
+    RapportTableComponent,
+    StatisticComponent,
   ],
   imports: [
     BrowserModule,
