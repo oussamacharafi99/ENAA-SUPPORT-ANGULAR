@@ -1,5 +1,5 @@
 <div class="mat-elevation-z8">
-    <table mat-table [dataSource]="dataSource" class="mat-table">
+    <table mat-table [dataSource]="dataSource" class="mat-table" *ngIf="dataSource.data.length > 0; else noData">
 
         <!-- Username Column -->
         <ng-container matColumnDef="userName">
@@ -54,4 +54,8 @@
         <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
 
     </table>
+
+    <ng-template #noData>
+        <div class="no-data-message">No data available</div>
+    </ng-template>
   </div>

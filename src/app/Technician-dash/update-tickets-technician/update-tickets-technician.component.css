@@ -1,26 +1,65 @@
 form{
     width: 100%;
-    padding: 20px;
+    padding: 20px 30px;
     background-color: #4375852a;
     display: flex;
+    justify-content: space-between;
+    align-items: end;
 }
-
 label{
     font-size: 15px ;
     font-weight: 700;
     color: white;
-}
-button{
     padding: 10px;
+    margin-bottom: 10px;
+}
+.group{
+    width: 90%;
+    text-align: left;
+}
+
+textarea{
+    color: white;
+    padding: 7px 12px;
+    border-radius: 8px;
+    border: 1px solid var(--color-secondary);
+    background: #43758510;
+    width: 100%;
+    height: 200px;
+    margin-top: 5px;
+}
+.btns{
+    width: 8%;
+}
+.btns > button{
+    padding: 10px 15px;
     border: 1px solid var(--color-secondary);
     background: transparent;
     color: var(--color-secondary);
     border-radius: 5px;
     font-weight: 700;
     cursor: pointer;
+    margin-bottom: 10px;
+    width: 100%;
 }
-button:hover , form > button:hover{
+.btns > button:hover , form > button:hover{
     background: var(--color-secondary);
+    color: white;
+    border: 1px solid transparent;
+}
+.btns > #clean{
+    padding: 10px 15px;
+    border: 1px solid var(--color-primary);
+    background: transparent;
+    color: var(--color-primary);
+    border-radius: 5px;
+    font-weight: 700;
+    cursor: pointer;
+    margin-bottom: 10px;
+    width: 100%;
+}
+.btns > #clean:hover , form > button:hover{
+    background: var(--color-primary);
     color: white;
     border: 1px solid transparent;
 }

@@ -25,5 +25,9 @@ export class AddPanneComponent implements OnInit {
     if (this.formPanne.valid) {
       this.service.add_pannes(this.formPanne.value).subscribe();
     }
+    this.formPanne = this.fb.group({
+      type: ['', Validators.required],
+      description: ['', Validators.required]
+    });
   }
 }

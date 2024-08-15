@@ -62,3 +62,18 @@ td.mat-cell {
 #status{
   color: red;
 }
+#remove {
+  padding: 6px;
+  border: 1px solid #ff1919;
+  background: transparent;
+  color: #ff1919;
+  border-radius: 5px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+#remove:hover {
+  background: #ff1919;
+  color: white;
+  border: 1px solid transparent;
+}

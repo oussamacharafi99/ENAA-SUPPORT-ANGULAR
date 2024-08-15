@@ -1,18 +1,28 @@
-.container > h5{
-    font-size: 17px;
-    color:white;
-    padding: 12px 10px;
-}
 .mat-elevation-z8 {
     background-color: #42424200;
     color: #fff;
     margin: 10px 0;
     padding: 10px;
-    max-height: 400px;
+    max-height: 500px;
     width: 100%;
     overflow-y: auto;
     border-radius: 7px;
 }
+.mat-elevation-z8::-webkit-scrollbar {
+    width: 1px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #333333;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: var(--color-primary);
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--color-primary);
+  }
 
 table {
     width: 100%;
@@ -26,6 +36,8 @@ td.mat-cell {
     color: #fff;
     background: transparent;
     text-transform: uppercase;
+    font-size: 12px;
+    padding: 5px;
 }
 
 th.mat-header-cell {
@@ -35,23 +47,10 @@ th.mat-header-cell {
 td.mat-cell {
     background-color: transparent;
 }
-
-#remove {
-    padding: 6px;
-    border: 1px solid #ff1919;
-    background: transparent;
-    color: #ff1919;
-    border-radius: 5px;
-    font-weight: 700;
-    cursor: pointer;
+#status{
+  color: rgb(84, 189, 255);
 }
-
-#remove:hover {
-    background: #ff1919;
-    color: white;
-    border: 1px solid transparent;
-}
-#update{
+#download{
     padding: 6px;
     border: 1px solid var(--color-secondary);
     background: transparent;
@@ -60,7 +59,7 @@ td.mat-cell {
     font-weight: 700;
     cursor: pointer;
 }
-#update:hover , form > button:hover{
+#download:hover , form > button:hover{
     background: var(--color-secondary);
     color: white;
     border: 1px solid transparent;

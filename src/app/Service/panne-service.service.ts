@@ -11,6 +11,7 @@ export class PanneServiceService {
 
   _API_GET_PANNES = "http://localhost:9999/api/panne/get";
   _API_ADD_PANNES = "http://localhost:9999/api/panne/add";
+  _API_DELETE_PANNES = "http://localhost:9999/api/panne/delete";
 
   get_pannes():Observable<Panne[]>{
     return this.http.get<Panne[]>(this._API_GET_PANNES)
@@ -20,6 +21,8 @@ export class PanneServiceService {
     return this.http.post<Panne>(this._API_ADD_PANNES, panne);
   }
 
-
+  delete_panne(id : number){
+    return this.http.delete(this._API_DELETE_PANNES + '/' + id);
+  }
 
 }

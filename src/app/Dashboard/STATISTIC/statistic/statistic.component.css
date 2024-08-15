@@ -1,0 +1,25 @@
+.hero-main-wrapper{
+    width: 100%;
+}
+.materials{
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #42424200;
+}
+.hero-main-second{
+    width: 100%;
+    justify-content: space-between;
+}
+.insertmaterial{
+    margin-top: 20px;
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #42424200;
+}
+.insertmaterial > h5{
+    font-size: 17px;
+    color:white;
+    padding: 12px 10px;
+}

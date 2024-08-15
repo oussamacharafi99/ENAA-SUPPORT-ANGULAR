@@ -36,5 +36,4 @@ export class MaterialServiceService {
   getMaterialById(id : number):Observable<Material>{
       return this.http.get<Material>(this._API_GET_BY_ID +'/'+ id);
   }
-
 }

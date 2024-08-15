@@ -15,6 +15,7 @@ export class PannesComponent implements OnInit {
     'date',
     'description',
     'type',
+    'delete'
   ];
   dataSource: MatTableDataSource<Panne>;
 
@@ -31,5 +32,12 @@ export class PannesComponent implements OnInit {
       this.dataSource.data = data;
       console.log(data);
     });
+  }
+
+  deletePanne(_id : number){
+    this.service.delete_panne(_id).subscribe(message => {
+      console.log(message);
+    })
+    this.loadTickets()
   }
 }
